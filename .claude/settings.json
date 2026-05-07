@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -sL --max-time 15 \"https://le-liang.github.io/mmw/\")",
+      "Bash(start \"\" \"g:\\\\dataset\\\\URT_SimReal_INTRO\\\\index.html\")"
+    ]
+  }
+}

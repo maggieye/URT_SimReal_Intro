@@ -1,0 +1,529 @@
+{
+	"dataset_meta": {
+		"name": "URT-SimReal",
+		"description": "A Large-Scale Multi-Frequency Hybrid Dataset for Integrated Sensing and Communication in Urban Rail Transit.",
+		"version": "1.0.0",
+		"maintainer": "YeJiang",
+		"keywords": [
+			"Urban Rail Transit",
+			"Sim-and-Real",
+			"Channel Modeling",
+			"Multi-model Sensing",
+			"Geometry-specific",
+			"Channel Measurement",
+			"Ray Tracing",
+			"Sub-6G",
+			"mmWave",
+			"ISAC"
+		],
+		"coordinate_system": "Cartesian (ENU: East-North-Up)",
+		"unit": "meter"
+	},
+	"data_structure_definition": {
+		"root_directory": "./URT_SimReal",
+		"modalities": {
+			"physical_environmental_sensing": {
+				"description": "Geometry and visual semantics of the environment.",
+				"formats": [
+					".ply (Point cloud)",
+					".png (RGB Image)",
+					".json (environment_semantics.json)"
+				]
+			},
+			"wireless_channel_propagation": {
+				"description": "Frequency-domain and Time-domain channel state information (CSI).",
+				"formats": [
+					".h5 (CIR/Params)",
+					".json (channel_labels.json)"
+				]
+			}
+		},
+		"domains": {
+			"Real": "Measurement-based data from physical campaigns.",
+			"Sim": "Ray-tracing simulation data aligned with physical measurement configurations."
+		}
+	},
+	"scenario_index": [
+		{
+			"category": "tunnel_line_scenarios",
+			"category_code": "TL",
+			"description": "Long-distance propagation in enclosed tunnel environments.",
+			"path_root": "./tunnel_line_scenarios",
+			"scenarios": [
+				{
+					"scenario_id": "TL_S",
+					"name": "Straight Tunnel",
+					"data_domain": "Sim_and_Real",
+					"instances": {
+						"Real": {
+							"instance_uid": "URT_SimReal_TL_S_Real",
+							"physical_environmental_sensing": {
+								"environment_semantic_path": "./tunnel_line_scenarios/TL_S/Real/physical_environmental_sensing/environment_semantics.json",
+								"point_cloud_path": "./tunnel_line_scenarios/TL_S/Real/physical_environmental_sensing/point_cloud/lidar_points.ply",
+								"rgb_directory": "./tunnel_line_scenarios/TL_S/Real/physical_environmental_sensing/rgb_images/"
+							},
+							"wireless_channel_propagation": [
+								{
+									"band_label": "1.8G",
+									"frequency_category": "Sub_6GHz",
+									"channel_label_path": "./tunnel_line_scenarios/TL_S/Real/wireless_channel_propagation/1_8G/channel_labels.json",
+									"data_files_pattern": "./tunnel_line_scenarios/TL_S/Real/wireless_channel_propagation/1_8G/*.h5"
+								},
+								{
+									"band_label": "28G",
+									"frequency_category": "mmWave",
+									"channel_label_path": "./tunnel_line_scenarios/TL_S/Real/wireless_channel_propagation/28G/channel_labels.json",
+									"data_files_pattern": "./tunnel_line_scenarios/TL_S/Real/wireless_channel_propagation/28G/*.h5"
+								},
+								{
+									"band_label": "39.5G",
+									"frequency_category": "mmWave",
+									"channel_label_path": "./tunnel_line_scenarios/TL_S/Real/wireless_channel_propagation/39_5G/channel_labels.json",
+									"data_files_pattern": "./tunnel_line_scenarios/TL_S/Real/wireless_channel_propagation/39_5G/*.h5"
+								}
+							]
+						},
+						"Sim": {
+							"instance_uid": "URT_SimReal_TL_S_Sim",
+							"physical_environmental_sensing": {
+								"environment_semantic_path": "./tunnel_line_scenarios/TL_S/Sim/physical_environmental_sensing/environment_semantics.json",
+								"point_cloud_path": "./tunnel_line_scenarios/TL_S/Sim/physical_environmental_sensing/point_cloud/lidar_points.ply",
+								"rgb_directory": "./tunnel_line_scenarios/TL_S/Sim/physical_environmental_sensing/rgb_images/"
+							},
+							"wireless_channel_propagation": [
+								{
+									"band_label": "1.8G",
+									"frequency_category": "Sub_6GHz",
+									"channel_label_path": "./tunnel_line_scenarios/TL_S/Sim/wireless_channel_propagation/1_8G/channel_labels.json",
+									"data_files_pattern": "./tunnel_line_scenarios/TL_S/Sim/wireless_channel_propagation/1_8G/*.h5"
+								},
+								{
+									"band_label": "3.5G",
+									"frequency_category": "Sub_6GHz",
+									"channel_label_path": "./tunnel_line_scenarios/TL_S/Sim/wireless_channel_propagation/3_5G/channel_labels.json",
+									"data_files_pattern": "./tunnel_line_scenarios/TL_S/Sim/wireless_channel_propagation/3_5G/*.h5"
+								},
+								{
+									"band_label": "5.6G",
+									"frequency_category": "Sub_6GHz",
+									"channel_label_path": "./tunnel_line_scenarios/TL_S/Sim/wireless_channel_propagation/5_6G/channel_labels.json",
+									"data_files_pattern": "./tunnel_line_scenarios/TL_S/Sim/wireless_channel_propagation/5_6G/*.h5"
+								},
+								{
+									"band_label": "28G",
+									"frequency_category": "mmWave",
+									"channel_label_path": "./tunnel_line_scenarios/TL_S/Sim/wireless_channel_propagation/28G/channel_labels.json",
+									"data_files_pattern": "./tunnel_line_scenarios/TL_S/Sim/wireless_channel_propagation/28G/*.h5"
+								},
+								{
+									"band_label": "39.5G",
+									"frequency_category": "mmWave",
+									"channel_label_path": "./tunnel_line_scenarios/TL_S/Sim/wireless_channel_propagation/39_5G/channel_labels.json",
+									"data_files_pattern": "./tunnel_line_scenarios/TL_S/Sim/wireless_channel_propagation/39_5G/*.h5"
+								},
+								{
+									"band_label": "60G",
+									"frequency_category": "mmWave",
+									"channel_label_path": "./tunnel_line_scenarios/TL_S/Sim/wireless_channel_propagation/60G/channel_labels.json",
+									"data_files_pattern": "./tunnel_line_scenarios/TL_S/Sim/wireless_channel_propagation/60G/*.h5"
+								}
+							]
+						}
+					}
+				},
+				{
+					"scenario_id": "TL_C",
+					"name": "Curved Tunnel",
+					"data_domain": "Sim_and_Real",
+					"instances": {
+						"Real": {
+							"instance_uid": "URT_SimReal_TL_C_Real",
+							"physical_environmental_sensing": {
+								"environment_semantic_path": "./tunnel_line_scenarios/TL_C/Real/physical_environmental_sensing/environment_semantics.json",
+								"point_cloud_path": "./tunnel_line_scenarios/TL_C/Real/physical_environmental_sensing/point_cloud/lidar_points.ply",
+								"rgb_directory": "./tunnel_line_scenarios/TL_C/Real/physical_environmental_sensing/rgb_images/"
+							},
+							"wireless_channel_propagation": [
+								{
+									"band_label": "3.5G",
+									"frequency_category": "Sub_6GHz",
+									"channel_label_path": "./tunnel_line_scenarios/TL_C/Real/wireless_channel_propagation/3_5G/channel_labels.json",
+									"data_files_pattern": "./tunnel_line_scenarios/TL_C/Real/wireless_channel_propagation/3_5G/*.h5"
+								},
+								{
+									"band_label": "5.6G",
+									"frequency_category": "Sub_6GHz",
+									"channel_label_path": "./tunnel_line_scenarios/TL_C/Real/wireless_channel_propagation/5_6G/channel_labels.json",
+									"data_files_pattern": "./tunnel_line_scenarios/TL_C/Real/wireless_channel_propagation/5_6G/*.h5"
+								}
+							]
+						},
+						"Sim": {
+							"instance_uid": "URT_SimReal_TL_C_Sim",
+							"physical_environmental_sensing": {
+								"environment_semantic_path": "./tunnel_line_scenarios/TL_C/Sim/physical_environmental_sensing/environment_semantics.json",
+								"point_cloud_path": "./tunnel_line_scenarios/TL_C/Sim/physical_environmental_sensing/point_cloud/lidar_points.ply",
+								"rgb_directory": "./tunnel_line_scenarios/TL_C/Sim/physical_environmental_sensing/rgb_images/"
+							},
+							"wireless_channel_propagation": [
+								{
+									"band_label": "1.8G",
+									"frequency_category": "Sub_6GHz",
+									"channel_label_path": "./tunnel_line_scenarios/TL_C/Sim/wireless_channel_propagation/1_8G/channel_labels.json",
+									"data_files_pattern": "./tunnel_line_scenarios/TL_C/Sim/wireless_channel_propagation/1_8G/*.h5"
+								},
+								{
+									"band_label": "3.5G",
+									"frequency_category": "Sub_6GHz",
+									"channel_label_path": "./tunnel_line_scenarios/TL_C/Sim/wireless_channel_propagation/3_5G/channel_labels.json",
+									"data_files_pattern": "./tunnel_line_scenarios/TL_C/Sim/wireless_channel_propagation/3_5G/*.h5"
+								},
+								{
+									"band_label": "5.6G",
+									"frequency_category": "Sub_6GHz",
+									"channel_label_path": "./tunnel_line_scenarios/TL_C/Sim/wireless_channel_propagation/5_6G/channel_labels.json",
+									"data_files_pattern": "./tunnel_line_scenarios/TL_C/Sim/wireless_channel_propagation/5_6G/*.h5"
+								},
+								{
+									"band_label": "28G",
+									"frequency_category": "mmWave",
+									"channel_label_path": "./tunnel_line_scenarios/TL_C/Sim/wireless_channel_propagation/28G/channel_labels.json",
+									"data_files_pattern": "./tunnel_line_scenarios/TL_C/Sim/wireless_channel_propagation/28G/*.h5"
+								},
+								{
+									"band_label": "39.5G",
+									"frequency_category": "mmWave",
+									"channel_label_path": "./tunnel_line_scenarios/TL_C/Sim/wireless_channel_propagation/39_5G/channel_labels.json",
+									"data_files_pattern": "./tunnel_line_scenarios/TL_C/Sim/wireless_channel_propagation/39_5G/*.h5"
+								},
+								{
+									"band_label": "60G",
+									"frequency_category": "mmWave",
+									"channel_label_path": "./tunnel_line_scenarios/TL_C/Sim/wireless_channel_propagation/60G/channel_labels.json",
+									"data_files_pattern": "./tunnel_line_scenarios/TL_C/Sim/wireless_channel_propagation/60G/*.h5"
+								}
+							]
+						}
+					}
+				},
+				{
+					"scenario_id": "TL_V",
+					"name": "Vehicle_filled Tunnel",
+					"data_domain": "Sim",
+					"instances": {
+						"Sim": {
+							"instance_uid": "URT_SimReal_TL_V_Sim",
+							"physical_environmental_sensing": {
+								"environment_semantic_path": "./tunnel_line_scenarios/TL_V/Sim/physical_environmental_sensing/environment_semantics.json",
+								"point_cloud_path": "./tunnel_line_scenarios/TL_V/Sim/physical_environmental_sensing/point_cloud/lidar_points.ply",
+								"rgb_directory": "./tunnel_line_scenarios/TL_V/Sim/physical_environmental_sensing/rgb_images/"
+							},
+							"wireless_channel_propagation": [
+								{
+									"band_label": "1.8G",
+									"frequency_category": "Sub_6GHz",
+									"channel_label_path": "./tunnel_line_scenarios/TL_V/Sim/wireless_channel_propagation/1_8G/channel_labels.json",
+									"data_files_pattern": "./tunnel_line_scenarios/TL_V/Sim/wireless_channel_propagation/1_8G/*.h5"
+								},
+								{
+									"band_label": "3.5G",
+									"frequency_category": "Sub_6GHz",
+									"channel_label_path": "./tunnel_line_scenarios/TL_V/Sim/wireless_channel_propagation/3_5G/channel_labels.json",
+									"data_files_pattern": "./tunnel_line_scenarios/TL_V/Sim/wireless_channel_propagation/3_5G/*.h5"
+								},
+								{
+									"band_label": "5.6G",
+									"frequency_category": "Sub_6GHz",
+									"channel_label_path": "./tunnel_line_scenarios/TL_V/Sim/wireless_channel_propagation/5_6G/channel_labels.json",
+									"data_files_pattern": "./tunnel_line_scenarios/TL_V/Sim/wireless_channel_propagation/5_6G/*.h5"
+								},
+								{
+									"band_label": "28G",
+									"frequency_category": "mmWave",
+									"channel_label_path": "./tunnel_line_scenarios/TL_V/Sim/wireless_channel_propagation/28G/channel_labels.json",
+									"data_files_pattern": "./tunnel_line_scenarios/TL_V/Sim/wireless_channel_propagation/28G/*.h5"
+								},
+								{
+									"band_label": "39.5G",
+									"frequency_category": "mmWave",
+									"channel_label_path": "./tunnel_line_scenarios/TL_V/Sim/wireless_channel_propagation/39_5G/channel_labels.json",
+									"data_files_pattern": "./tunnel_line_scenarios/TL_V/Sim/wireless_channel_propagation/39_5G/*.h5"
+								},
+								{
+									"band_label": "60G",
+									"frequency_category": "mmWave",
+									"channel_label_path": "./tunnel_line_scenarios/TL_V/Sim/wireless_channel_propagation/60G/channel_labels.json",
+									"data_files_pattern": "./tunnel_line_scenarios/TL_V/Sim/wireless_channel_propagation/60G/*.h5"
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		{
+			"category": "station_hub_scenarios",
+			"category_code": "SH",
+			"description": "A semi_open station hub scenario with complex scattering.",
+			"path_root": "./station_hub_scenarios",
+			"scenarios": [
+				{
+					"scenario_id": "SH_E",
+					"name": "Elevated Station hub",
+					"data_domain": "Sim_Only",
+					"instances": {
+						"Sim": {
+							"instance_uid": "URT_SimReal_SH_E_Sim",
+							"physical_environmental_sensing": {
+								"environment_semantic_path": "./station_hub_scenarios/SH_E/Sim/physical_environmental_sensing/environment_semantics.json",
+								"point_cloud_path": "./station_hub_scenarios/SH_E/Sim/physical_environmental_sensing/point_cloud/lidar_points.ply",
+								"rgb_directory": "./station_hub_scenarios/SH_E/Sim/physical_environmental_sensing/rgb_images/"
+							},
+							"wireless_channel_propagation": [
+								{
+									"band_label": "3.5G",
+									"frequency_category": "Sub_6GHz",
+									"channel_label_path": "./station_hub_scenarios/SH_E/Sim/wireless_channel_propagation/3_5G/channel_labels.json",
+									"data_files_pattern": "./station_hub_scenarios/SH_E/Sim/wireless_channel_propagation/3_5G/*.h5"
+								},
+								{
+									"band_label": "5.6G",
+									"frequency_category": "Sub_6GHz",
+									"channel_label_path": "./station_hub_scenarios/SH_E/Sim/wireless_channel_propagation/5_6G/channel_labels.json",
+									"data_files_pattern": "./station_hub_scenarios/SH_E/Sim/wireless_channel_propagation/5_6G/*.h5"
+								},
+								{
+									"band_label": "28G",
+									"frequency_category": "mmWave",
+									"channel_label_path": "./station_hub_scenarios/SH_E/Sim/wireless_channel_propagation/28G/channel_labels.json",
+									"data_files_pattern": "./station_hub_scenarios/SH_E/Sim/wireless_channel_propagation/28G/*.h5"
+								},
+								{
+									"band_label": "39.5G",
+									"frequency_category": "mmWave",
+									"channel_label_path": "./station_hub_scenarios/SH_E/Sim/wireless_channel_propagation/39_5G/channel_labels.json",
+									"data_files_pattern": "./station_hub_scenarios/SH_E/Sim/wireless_channel_propagation/39_5G/*.h5"
+								},
+								{
+									"band_label": "60G",
+									"frequency_category": "mmWave",
+									"channel_label_path": "./station_hub_scenarios/SH_E/Sim/wireless_channel_propagation/60G/channel_labels.json",
+									"data_files_pattern": "./station_hub_scenarios/SH_E/Sim/wireless_channel_propagation/60G/*.h5"
+								}
+							]
+						}
+					}
+				},
+				{
+					"scenario_id": "SH_G",
+					"name": "Ground station",
+					"data_domain": "Sim_Only",
+					"instances": {
+						"Sim": {
+							"instance_uid": "URT_SimReal_SH_G_Sim",
+							"physical_environmental_sensing": {
+								"environment_semantic_path": "./station_hub_scenarios/SH_G/Sim/physical_environmental_sensing/environment_semantics.json",
+								"point_cloud_path": "./station_hub_scenarios/SH_G/Sim/physical_environmental_sensing/point_cloud/lidar_points.ply",
+								"rgb_directory": "./station_hub_scenarios/SH_G/Sim/physical_environmental_sensing/rgb_images/"
+							},
+							"wireless_channel_propagation": [
+								{
+									"band_label": "3.5G",
+									"frequency_category": "Sub_6GHz",
+									"channel_label_path": "./station_hub_scenarios/SH_G/Sim/wireless_channel_propagation/3_5G/channel_labels.json",
+									"data_files_pattern": "./station_hub_scenarios/SH_G/Sim/wireless_channel_propagation/3_5G/*.h5"
+								},
+								{
+									"band_label": "5.6G",
+									"frequency_category": "Sub_6GHz",
+									"channel_label_path": "./station_hub_scenarios/SH_G/Sim/wireless_channel_propagation/5_6G/channel_labels.json",
+									"data_files_pattern": "./station_hub_scenarios/SH_G/Sim/wireless_channel_propagation/5_6G/*.h5"
+								},
+								{
+									"band_label": "28G",
+									"frequency_category": "mmWave",
+									"channel_label_path": "./station_hub_scenarios/SH_G/Sim/wireless_channel_propagation/28G/channel_labels.json",
+									"data_files_pattern": "./station_hub_scenarios/SH_G/Sim/wireless_channel_propagation/28G/*.h5"
+								},
+								{
+									"band_label": "39.5G",
+									"frequency_category": "mmWave",
+									"channel_label_path": "./station_hub_scenarios/SH_G/Sim/wireless_channel_propagation/39_5G/channel_labels.json",
+									"data_files_pattern": "./station_hub_scenarios/SH_G/Sim/wireless_channel_propagation/39_5G/*.h5"
+								},
+								{
+									"band_label": "60G",
+									"frequency_category": "mmWave",
+									"channel_label_path": "./station_hub_scenarios/SH_G/Sim/wireless_channel_propagation/60G/channel_labels.json",
+									"data_files_pattern": "./station_hub_scenarios/SH_G/Sim/wireless_channel_propagation/60G/*.h5"
+								}
+							]
+						}
+					}
+				},
+				{
+					"scenario_id": "SH_V",
+					"name": "Vehicle_docked",
+					"data_domain": "Sim_Only",
+					"instances": {
+						"Sim": {
+							"instance_uid": "URT_SimReal_SH_V_Sim",
+							"physical_environmental_sensing": {
+								"environment_semantic_path": "./station_hub_scenarios/SH_V/Sim/physical_environmental_sensing/environment_semantics.json",
+								"point_cloud_path": "./station_hub_scenarios/SH_V/Sim/physical_environmental_sensing/point_cloud/lidar_points.ply",
+								"rgb_directory": "./station_hub_scenarios/SH_V/Sim/physical_environmental_sensing/rgb_images/"
+							},
+							"wireless_channel_propagation": [
+								{
+									"band_label": "3.5G",
+									"frequency_category": "Sub_6GHz",
+									"channel_label_path": "./station_hub_scenarios/SH_V/Sim/wireless_channel_propagation/3_5G/channel_labels.json",
+									"data_files_pattern": "./station_hub_scenarios/SH_V/Sim/wireless_channel_propagation/3_5G/*.h5"
+								},
+								{
+									"band_label": "5.6G",
+									"frequency_category": "Sub_6GHz",
+									"channel_label_path": "./station_hub_scenarios/SH_V/Sim/wireless_channel_propagation/5_6G/channel_labels.json",
+									"data_files_pattern": "./station_hub_scenarios/SH_V/Sim/wireless_channel_propagation/5_6G/*.h5"
+								},
+								{
+									"band_label": "28G",
+									"frequency_category": "mmWave",
+									"channel_label_path": "./station_hub_scenarios/SH_V/Sim/wireless_channel_propagation/28G/channel_labels.json",
+									"data_files_pattern": "./station_hub_scenarios/SH_V/Sim/wireless_channel_propagation/28G/*.h5"
+								},
+								{
+									"band_label": "39.5G",
+									"frequency_category": "mmWave",
+									"channel_label_path": "./station_hub_scenarios/SH_V/Sim/wireless_channel_propagation/39_5G/channel_labels.json",
+									"data_files_pattern": "./station_hub_scenarios/SH_V/Sim/wireless_channel_propagation/39_5G/*.h5"
+								},
+								{
+									"band_label": "60G",
+									"frequency_category": "mmWave",
+									"channel_label_path": "./station_hub_scenarios/SH_V/Sim/wireless_channel_propagation/60G/channel_labels.json",
+									"data_files_pattern": "./station_hub_scenarios/SH_V/Sim/wireless_channel_propagation/60G/*.h5"
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		{
+			"category": "hybrid_environment_scenarios",
+			"category_code": "HE",
+			"description": "Hybrid and open space scenarios of URT.",
+			"path_root": "./hybrid_environment_scenarios",
+			"scenarios": [
+				{
+					"scenario_id": "HE_U",
+					"name": "Urban_Parallel",
+					"data_domain": "Sim_Only",
+					"instances": {
+						"Sim": {
+							"instance_uid": "URT_SimReal_HE_U_Sim",
+							"physical_environmental_sensing": {
+								"environment_semantic_path": "./hybrid_environment_scenarios/HE_U/Sim/physical_environmental_sensing/environment_semantics.json",
+								"point_cloud_path": "./hybrid_environment_scenarios/HE_U/Sim/physical_environmental_sensing/point_cloud/lidar_points.ply",
+								"rgb_directory": "./hybrid_environment_scenarios/HE_U/Sim/physical_environmental_sensing/rgb_images/"
+							},
+							"wireless_channel_propagation": [
+								{
+									"band_label": "3.5G",
+									"frequency_category": "Sub_6GHz",
+									"channel_label_path": "./hybrid_environment_scenarios/HE_U/Sim/wireless_channel_propagation/3_5G/channel_labels.json",
+									"data_files_pattern": "./hybrid_environment_scenarios/HE_U/Sim/wireless_channel_propagation/3_5G/*.h5"
+								},
+								{
+									"band_label": "5.6G",
+									"frequency_category": "Sub_6GHz",
+									"channel_label_path": "./hybrid_environment_scenarios/HE_U/Sim/wireless_channel_propagation/5_6G/channel_labels.json",
+									"data_files_pattern": "./hybrid_environment_scenarios/HE_U/Sim/wireless_channel_propagation/5_6G/*.h5"
+								},
+								{
+									"band_label": "28G",
+									"frequency_category": "mmWave",
+									"channel_label_path": "./hybrid_environment_scenarios/HE_U/Sim/wireless_channel_propagation/28G/channel_labels.json",
+									"data_files_pattern": "./hybrid_environment_scenarios/HE_U/Sim/wireless_channel_propagation/28G/*.h5"
+								},
+								{
+									"band_label": "39.5G",
+									"frequency_category": "mmWave",
+									"channel_label_path": "./hybrid_environment_scenarios/HE_U/Sim/wireless_channel_propagation/39_5G/channel_labels.json",
+									"data_files_pattern": "./hybrid_environment_scenarios/HE_U/Sim/wireless_channel_propagation/39_5G/*.h5"
+								},
+								{
+									"band_label": "60G",
+									"frequency_category": "mmWave",
+									"channel_label_path": "./hybrid_environment_scenarios/HE_U/Sim/wireless_channel_propagation/60G/channel_labels.json",
+									"data_files_pattern": "./hybrid_environment_scenarios/HE_U/Sim/wireless_channel_propagation/60G/*.h5"
+								}
+							]
+						}
+					}
+				}
+			]
+		},
+		{
+			"category": "controlled_experimental_environments",
+			"category_code": "CE",
+			"description": "Controlled synthetic experimental environment for benchmarking.",
+			"path_root": "./controlled_experimental_environments",
+			"scenarios": [
+				{
+					"scenario_id": "CE_C",
+					"name": "Controlled corridor environment for simulating tunnel scenarios",
+					"data_domain": "Real_Only",
+					"instances": {
+						"Real": {
+							"instance_uid": "URT_SimReal_CE_C_Real",
+							"physical_environmental_sensing": {
+								"environment_semantic_path": "./controlled_experimental_environments/CE_C/Real/physical_environmental_sensing/environment_semantics.json",
+								"point_cloud_path": "./controlled_experimental_environments/CE_C/Real/physical_environmental_sensing/point_cloud/lidar_points.ply",
+								"rgb_directory": "./controlled_experimental_environments/CE_C/Real/physical_environmental_sensing/rgb_images/"
+							},
+							"wireless_channel_propagation": [
+								{
+									"band_label": "3G",
+									"frequency_category": "Sub_6GHz",
+									"channel_label_path": "./controlled_experimental_environments/CE_C/Real/wireless_channel_propagation/3G/channel_labels.json",
+									"data_files_pattern": "./controlled_experimental_environments/CE_C/Real/wireless_channel_propagation/3G/*.h5"
+								}
+							]
+						}
+					}
+				},
+				{
+					"scenario_id": "CE_E",
+					"name": "Controlled Elevated Curved Viaduct Environment",
+					"data_domain": "Real_Only",
+					"instances": {
+						"Real": {
+							"instance_uid": "URT_SimReal_CE_E_Real",
+							"physical_environmental_sensing": {
+								"environment_semantic_path": "./controlled_experimental_environments/CE_E/Real/physical_environmental_sensing/environment_semantics.json",
+								"point_cloud_path": "./controlled_experimental_environments/CE_E/Real/physical_environmental_sensing/point_cloud/lidar_points.ply",
+								"rgb_directory": "./controlled_experimental_environments/CE_E/Real/physical_environmental_sensing/rgb_images/"
+							},
+							"wireless_channel_propagation": [
+								{
+									"band_label": "1.5G",
+									"frequency_category": "Sub_6GHz",
+									"channel_label_path": "./controlled_experimental_environments/CE_E/Real/wireless_channel_propagation/1_5G/channel_labels.json",
+									"data_files_pattern": "./controlled_experimental_environments/CE_E/Real/wireless_channel_propagation/1_5G/*.h5"
+								},
+								{
+									"band_label": "3G",
+									"frequency_category": "Sub_6GHz",
+									"channel_label_path": "./controlled_experimental_environments/CE_E/Real/wireless_channel_propagation/3G/channel_labels.json",
+									"data_files_pattern": "./controlled_experimental_environments/CE_E/Real/wireless_channel_propagation/3G/*.h5"
+								}
+							]
+						}
+					}
+				}
+			]
+		}
+	]
+}
