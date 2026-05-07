@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URT-SimReal Dataset</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== Top Navigation Bar ===== -->
+<header class="topbar">
+    <div class="topbar-inner">
+        <a class="brand" href="#">URT-SimReal</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+        <nav class="nav-links" id="nav-links" aria-label="Primary">
+            <a href="#overview" class="active">Overview</a>
+            <a href="#features">Features</a>
+            <a href="#scenarios">Scenarios</a>
+            <a href="#structure">Structure</a>
+            <a href="#download">Download</a>
+            <a href="#citation">Citation</a>
+            <button class="lang-toggle" id="lang-toggle">中文</button>
+        </nav>
+    </div>
+</header>
+
+<!-- ===== Hero Section ===== -->
+<section class="hero" id="hero">
+    <canvas class="hero-canvas" id="hero-canvas"></canvas>
+    <div class="hero-overlay">
+        <h1 class="hero-title" id="hero-title">URT-SimReal</h1>
+        <p class="hero-subtitle" id="hero-subtitle">
+            A Hybrid Real and Simulated Multi-modal Dataset of 3D Spatial Environments and Multi-band Wireless Channels for Urban Rail Transit
+        </p>
+        <!-- <div class="hero-controls">
+            <div class="split-button">
+                <a href="https://doi.org/10.5281/zenodo.19920829" target="_blank" class="split-left">Zenodo</a>
+                <a href="https://doi.org/10.5281/zenodo.19920829" target="_blank" class="split-right">数据集</a>
+            </div>
+        </div> -->
+    </div>
+</section>
+
+<!-- ===== Dataset Description (What is URT-SimReal?) ===== -->
+<section class="dataset-desc" id="overview">
+    <div class="dataset-desc-flex">
+        <div style="flex: 1.5; min-width: 320px;">
+            <h2 class="dataset-desc-title" id="overview-title">What is URT-SimReal?</h2>
+            <div class="dataset-desc-summary" id="overview-summary"></div>
+            <ul class="dataset-desc-list" id="overview-bullets"></ul>
+        </div>
+        <div style="flex: 1; display: flex; flex-wrap: wrap; gap: 19px; justify-content: center; align-items: flex-start; max-width: 550px; min-width: 300px;">
+            <div class="hero-stat-card">
+                <div class="stat-number">316K+</div>
+                <div class="stat-label-en">CSI Records</div>
+                <div class="stat-label-zh">CSI 信道状态信息</div>
+            </div>
+            <div class="hero-stat-card">
+                <div class="stat-number">11 Types</div>
+                <div class="stat-label-en">Typical URT Environments</div>
+                <div class="stat-label-zh">典型城市城轨场景</div>
+            </div>
+            <div class="hero-stat-card">
+                <div class="stat-number">Sub-6G & mmWave</div>
+                <div class="stat-label-en">Full-band Coverage</div>
+                <div class="stat-label-zh">轨交频段覆盖</div>
+            </div>
+            <div class="hero-stat-card">
+                <div class="stat-number">Sim-Real</div>
+                <div class="stat-label-en">Hybrid Data</div>
+                <div class="stat-label-zh">实测与仿真数据融合</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== Multi-modal Data Section ===== -->
+<section class="multimodal-section" id="features">
+    <h2 class="multimodal-title" id="features-title">Multi-modal Data Involved</h2>
+    <div class="multimodal-grid" id="features-grid">
+        <!-- Populated by JS -->
+    </div>
+</section>
+
+<!-- ===== Scenarios Section ===== -->
+<section class="container" id="scenarios">
+    <h2 id="scenarios-title">Scenario Categories</h2>
+    <div id="scenarios-cards">
+        <!-- Populated by JS -->
+    </div>
+</section>
+
+<!-- ===== Dataset Structure Section ===== -->
+<section class="container" id="structure">
+    <h2 id="structure-title">Dataset Structure</h2>
+    <p id="structure-desc" style="margin-bottom:1rem;"></p>
+    <div class="structure-tree" id="structure-tree">
+        <!-- Populated by JS -->
+    </div>
+</section>
+
+<!-- ===== Channel Data Format Section ===== -->
+<section class="container" id="channel-data">
+    <h2 id="channel-title">Channel Data Format</h2>
+    <p id="channel-desc" style="margin-bottom:1.5rem;"></p>
+
+    <h3 id="attr-title" style="font-size:1.15rem; color:#2c3e50; margin-bottom:0.5rem;">Link-Level Parameters</h3>
+    <div class="table-wrapper">
+        <table>
+            <thead><tr><th>Attribute</th><th>Description</th></tr></thead>
+            <tbody id="attr-body"><!-- Populated by JS --></tbody>
+        </table>
+    </div>
+
+    <h3 id="ds-title" style="font-size:1.15rem; color:#2c3e50; margin:1.5rem 0 0.5rem;">Available Datasets</h3>
+    <div class="table-wrapper">
+        <table>
+            <thead><tr><th>Dataset</th><th>Data Type</th><th>Description</th></tr></thead>
+            <tbody id="ds-body"><!-- Populated by JS --></tbody>
+        </table>
+    </div>
+</section>
+
+<!-- ===== Download Section ===== -->
+<section class="container" id="download">
+    <h2 id="download-title">Download</h2>
+    <p id="download-desc" style="margin-bottom:1.5rem;"></p>
+    <div class="download-box">
+        <a class="download-btn" id="download-btn" href="https://doi.org/10.5281/zenodo.19920829" target="_blank">
+            Download from Zenodo
+        </a>
+        <p class="download-meta" id="download-size"></p>
+        <p class="download-meta" id="download-license"></p>
+    </div>
+</section>
+
+<!-- ===== Citation Section ===== -->
+<section class="container" id="citation">
+    <h2 id="citation-title">Citation</h2>
+    <p id="citation-desc" style="margin-bottom:1rem;"></p>
+    <div class="citation-box">
+        <strong>BibTeX</strong>
+        <div style="position:relative;">
+            <pre id="bibtex-content"></pre>
+            <button class="copy-btn" data-target="bibtex-content" data-copied="Copied!">Copy</button>
+        </div>
+    </div>
+    <div class="citation-box" style="margin-top:1rem;">
+        <strong>APA</strong>
+        <div style="position:relative;">
+            <pre id="apa-content"></pre>
+            <button class="copy-btn" data-target="apa-content" data-copied="Copied!">Copy</button>
+        </div>
+    </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+    <p id="footer-maintainer">Maintained by YeJiang</p>
+    <p id="footer-copyright" style="margin-top:0.25rem;">&copy; 2026 URT-SimReal. All rights reserved.</p>
+</footer>
+
+<script src="config/en.js"></script>
+<script src="config/zh.js"></script>
+<script src="js/hero-bg.js"></script>
+<script src="js/i18n.js"></script>
+</body>
+</html>
