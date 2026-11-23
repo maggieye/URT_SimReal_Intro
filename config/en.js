@@ -12,16 +12,14 @@ window.__I18N_EN = {
   "hero": {
     "title": "URT-SimReal",
     "subtitle": "A Hybrid Real and Simulated Multi-modal Dataset of 3D Spatial Environments and Multi-band Wireless Channels for Urban Rail Transit",
-    "doi": "https://doi.org/10.5281/zenodo.19920829",
-    "doi_label": "DOI",
-    "version": "v1.0.0"
+    "paperStatus": "Accepted for publication in Scientific Data on 20 November 2026."
   },
   "overview": {
     "title": "Overview",
     "paragraphs": [
-      "<strong>URT-SimReal</strong> is a high-fidelity, multi-modal, and measurement-calibrated hybrid dataset specifically tailored for Urban Rail Transit (URT) scenarios, featuring a seamless fusion of <strong>Simulated and Real-World (sim-to-real)</strong> channel data. The dataset encompasses 11 typical URT environments, including <strong>fully enclosed tunnels, station platforms, viaducts, and complex urban track sections</strong>, deeply integrating invaluable empirical data from operational lines with scenario-specific ray-tracing simulations.",
-      "The spectral coverage spans from <strong>Sub-6 GHz (1.8, 3.5, and 5.6 GHz)</strong> to dedicated <strong>millimeter-wave (mmWave) bands (28, 39.5, and 60 GHz)</strong>. Adhering strictly to the ITU-R P.2040-3 recommendations and 3GPP TR 38.901 standards (0.5–100 GHz channel models), we have assigned precise electromagnetic (EM) properties to key infrastructure components, such as concrete tunnel walls, train bodies, rails, platform screen doors (PSDs), and trackside vegetation.",
-      "The dataset contains <strong>316,026 Channel State Information (CSI) records</strong> across various frequency bands and polarization configurations. It provides not only macroscopic channel parameters, such as <strong>Path Loss (PL)</strong> and <strong>RMS Delay Spread</strong>, but also granular geometric attributes for <strong>Power Delay Profiles (PDP)</strong> and <strong>Multi-path Components (MPCs)</strong>. Furthermore, the inclusion of synchronized <strong>3D Point Clouds</strong>, <strong>RGB images</strong>, and <strong>Environmental Semantic Labels</strong> provides a powerful physical characterization of the environment, significantly enriching the multi-modal attributes of the dataset for advanced environment-aware research."
+      "<strong>URT-SimReal</strong> combines field measurements and deterministic ray-tracing simulations for urban rail transit (URT) research. The release contains <strong>11 Real or Sim instances across nine scenario identifiers</strong>, spanning tunnels, station hubs, elevated structures, and urban rail environments. Real and Sim instances with the same identifier represent the same scenario category and retain their own geometry, coordinate system, and sampling layout.",
+      "The core URT scenarios cover <strong>1.8, 3.5, 5.6, 28, 39.5, and 60 GHz</strong>. Controlled experiments extend coverage to <strong>1.5 and 3 GHz</strong>.",
+      "The release contains <strong>209,376 channel state information (CSI) records</strong> and provides path loss, RMS delay spread, power delay profiles, and multipath component parameters, together with 3D point clouds, RGB images, and environmental semantic labels."
     ]
   },
   "features": {
@@ -34,17 +32,17 @@ window.__I18N_EN = {
       },
       {
         "icon": "🏙️",
-        "title": "11 URT Environments",
+        "title": "11 Real or Sim Instances",
         "desc": "Enclosed tunnels, elevated stations, viaducts, urban parallel sections, and controlled experimental settings for comprehensive evaluation."
       },
       {
         "icon": "🔄",
-        "title": "Sim-to-Real Fusion",
-        "desc": "Seamless integration of field measurements from operational lines with site-specific ray-tracing simulations, calibrated for accuracy."
+        "title": "Real and Sim Data",
+        "desc": "Field measurements and ray-tracing simulations are organized by scenario category. Each instance retains its own geometry, coordinate system, and sampling layout."
       },
       {
         "icon": "📊",
-        "title": "316,026 CSI Records",
+        "title": "209,376 CSI Records",
         "desc": "Large-scale channel data across multiple bands and polarizations, covering Path Loss, Delay Spread, PDPs, and MPCs."
       },
       {
@@ -145,15 +143,15 @@ window.__I18N_EN = {
     "title": "Download",
     "description": "The URT-SimReal dataset is publicly available on Zenodo. Access includes point clouds, RGB images, semantic labels, and channel measurements across all scenarios.",
     "button": "Download from Zenodo",
-    "url": "https://doi.org/10.5281/zenodo.19920829",
-    "size": "Total dataset size: ~XXX GB (to be updated)",
+    "url": "https://doi.org/10.5281/zenodo.23464109",
+    "size": "Total download size: approximately 30.5 GB",
     "license": "License: CC BY 4.0"
   },
   "citation": {
-    "title": "Citation",
-    "description": "If you use URT-SimReal in your research, please cite our paper:",
-    "bibtex": "@misc{jiang2026urtsimreal,\n  title        = {URT-SimReal: A Hybrid Real and Simulated Multi-modal Dataset\n                   of 3D Spatial Environments and Multi-band Wireless Channels\n                   for Urban Rail Transit},\n  author       = {Jiang, Ye},\n  year         = {2026},\n  publisher    = {Zenodo},\n  doi          = {10.5281/zenodo.19920829},\n  url          = {https://doi.org/10.5281/zenodo.19920829},\n  note         = {Version 1.0.0}\n}",
-    "apa": "Jiang, Y. (2026). URT-SimReal: A Hybrid Real and Simulated Multi-modal Dataset of 3D Spatial Environments and Multi-band Wireless Channels for Urban Rail Transit (Version 1.0.0) [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.19920829"
+    "title": "Dataset Citation",
+    "description": "If you use URT-SimReal, please cite the Zenodo dataset record below.",
+    "bibtex": "@misc{jiang2026urtsimreal,\n  title        = {URT-SimReal: A Hybrid Real and Simulated Multi-modal Dataset\n                   of 3D Spatial Environments and Multi-band Wireless Channels\n                   for Urban Rail Transit},\n  author       = {Jiang, Ye},\n  year         = {2026},\n  publisher    = {Zenodo},\n  doi          = {10.5281/zenodo.23464109},\n  url          = {https://doi.org/10.5281/zenodo.23464109},\n  note         = {V2.0}\n}",
+    "apa": "Jiang, Y. (2026). URT-SimReal: A Hybrid Real and Simulated Multi-modal Dataset of 3D Spatial Environments and Multi-band Wireless Channels for Urban Rail Transit (V2.0) [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.23464109"
   },
   "footer": {
     "maintainer": "Maintained by YeJiang",

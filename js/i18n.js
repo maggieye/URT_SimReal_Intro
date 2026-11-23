@@ -60,6 +60,7 @@ const I18n = {
     var el;
     el = document.getElementById('hero-title'); if (el) el.textContent = h.title;
     el = document.getElementById('hero-subtitle'); if (el) el.textContent = h.subtitle;
+    el = document.getElementById('hero-paper-status'); if (el) el.textContent = h.paperStatus;
   },
 
   // === Overview ===
