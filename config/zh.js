@@ -11,8 +11,7 @@ window.__I18N_ZH = {
   },
   "hero": {
     "title": "URT-SimReal",
-    "subtitle": "面向城市轨道交通的虚实混合多模态三维环境与多频段无线信道数据集",
-    "paperStatus": "数据论文已于 2026 年 11 月 20 日被 Scientific Data 接收。"
+    "subtitle": "面向城市轨道交通的虚实混合多模态三维环境与多频段无线信道数据集"
   },
   "overview": {
     "title": "概述",
@@ -148,10 +147,10 @@ window.__I18N_ZH = {
     "license": "许可证：CC BY 4.0"
   },
   "citation": {
-    "title": "数据集引用",
-    "description": "如在研究中使用 URT-SimReal，请引用下列 Zenodo 数据集记录。",
-    "bibtex": "@misc{jiang2026urtsimreal,\n  title        = {URT-SimReal: A Hybrid Real and Simulated Multi-modal Dataset\n                   of 3D Spatial Environments and Multi-band Wireless Channels\n                   for Urban Rail Transit},\n  author       = {Jiang, Ye},\n  year         = {2026},\n  publisher    = {Zenodo},\n  doi          = {10.5281/zenodo.23464109},\n  url          = {https://doi.org/10.5281/zenodo.23464109},\n  note         = {V2.0}\n}",
-    "apa": "Jiang, Y. (2026). URT-SimReal: A Hybrid Real and Simulated Multi-modal Dataset of 3D Spatial Environments and Multi-band Wireless Channels for Urban Rail Transit (V2.0) [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.23464109"
+    "title": "数据集论文引用",
+    "description": "如在研究中使用 URT-SimReal，请引用以下数据集论文。",
+    "bibtex": "@article{jiang2026urtsimreal,\n  title   = {A Hybrid Real and Simulated Multi-modal Dataset of 3D Spatial Environments and Multi-band Wireless Channels for Urban Rail Transit},\n  author  = {Jiang, Ye and Wang, Rui and Wang, Xiaoyong and Chen, Yunkuo and Wu, YaTing and Feng, Yichen and Zheng, Guoxin},\n  journal = {Scientific Data},\n  note    = {In press}\n}",
+    "apa": "Jiang, Y., Wang, R., Wang, X., Chen, Y., Wu, Y., Feng, Y., & Zheng, G. (in press). A hybrid real and simulated multi-modal dataset of 3D spatial environments and multi-band wireless channels for urban rail transit. Scientific Data."
   },
   "footer": {
     "maintainer": "维护者：YeJiang",

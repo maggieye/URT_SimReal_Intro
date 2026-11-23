@@ -11,8 +11,7 @@ window.__I18N_EN = {
   },
   "hero": {
     "title": "URT-SimReal",
-    "subtitle": "A Hybrid Real and Simulated Multi-modal Dataset of 3D Spatial Environments and Multi-band Wireless Channels for Urban Rail Transit",
-    "paperStatus": "Accepted for publication in Scientific Data on 20 November 2026."
+    "subtitle": "A Hybrid Real and Simulated Multi-modal Dataset of 3D Spatial Environments and Multi-band Wireless Channels for Urban Rail Transit"
   },
   "overview": {
     "title": "Overview",
@@ -148,10 +147,10 @@ window.__I18N_EN = {
     "license": "License: CC BY 4.0"
   },
   "citation": {
-    "title": "Dataset Citation",
-    "description": "If you use URT-SimReal, please cite the Zenodo dataset record below.",
-    "bibtex": "@misc{jiang2026urtsimreal,\n  title        = {URT-SimReal: A Hybrid Real and Simulated Multi-modal Dataset\n                   of 3D Spatial Environments and Multi-band Wireless Channels\n                   for Urban Rail Transit},\n  author       = {Jiang, Ye},\n  year         = {2026},\n  publisher    = {Zenodo},\n  doi          = {10.5281/zenodo.23464109},\n  url          = {https://doi.org/10.5281/zenodo.23464109},\n  note         = {V2.0}\n}",
-    "apa": "Jiang, Y. (2026). URT-SimReal: A Hybrid Real and Simulated Multi-modal Dataset of 3D Spatial Environments and Multi-band Wireless Channels for Urban Rail Transit (V2.0) [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.23464109"
+    "title": "Cite the Dataset Paper",
+    "description": "If you use URT-SimReal, please cite the following dataset paper.",
+    "bibtex": "@article{jiang2026urtsimreal,\n  title   = {A Hybrid Real and Simulated Multi-modal Dataset of 3D Spatial Environments and Multi-band Wireless Channels for Urban Rail Transit},\n  author  = {Jiang, Ye and Wang, Rui and Wang, Xiaoyong and Chen, Yunkuo and Wu, YaTing and Feng, Yichen and Zheng, Guoxin},\n  journal = {Scientific Data},\n  note    = {In press}\n}",
+    "apa": "Jiang, Y., Wang, R., Wang, X., Chen, Y., Wu, Y., Feng, Y., & Zheng, G. (in press). A hybrid real and simulated multi-modal dataset of 3D spatial environments and multi-band wireless channels for urban rail transit. Scientific Data."
   },
   "footer": {
     "maintainer": "Maintained by YeJiang",
